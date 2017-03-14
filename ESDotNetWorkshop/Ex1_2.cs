@@ -22,13 +22,15 @@ namespace ESDotNetWorkshop
         {
             string strCN = "data source=(local);integrated security=SSPI;initial catalog=Dafesty";
             SqlConnection cn = new SqlConnection(strCN);
-
-            string sqlCMovieList = "SELECT MovieTitle FROM movies";
-            SqlCommand cm = new SqlCommand(sqlCMovieList, cn);
-
             cn.Open();
+            string sqlCMovieList = "SELECT MovieTitle FROM movies WHERE rating = @ratings";
+            SqlCommand cm = new SqlCommand(sqlCMovieList, cn);
+            SqlParameter ratings = new SqlParameter("ratings", SqlDbType.NVarChar);
+            cm.Parameters.Add(ratings);
+            ratings.Value = txtRatings.Text;
+            
             SqlDataReader rd = cm.ExecuteReader();
-            //lbxMovieList.Text = "";
+            lbxMovieList.Text = "";
             while (rd.Read())
             {
                 lbxMovieList.Items.Add(rd["MovieTitle"].ToString()+Environment.NewLine);
