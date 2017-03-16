@@ -33,6 +33,10 @@
             this.btnByMovTitleAsc = new System.Windows.Forms.Button();
             this.btnByRPDesc = new System.Windows.Forms.Button();
             this.btnRetrieveRRated = new System.Windows.Forms.Button();
+            this.btnRetrieveAllSciFicbyWarner = new System.Windows.Forms.Button();
+            this.btnTotalActMov = new System.Windows.Forms.Button();
+            this.lblShow = new System.Windows.Forms.Label();
+            this.btnTotalStockofActMov = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllMovies)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,11 +89,53 @@
             this.btnRetrieveRRated.UseVisualStyleBackColor = true;
             this.btnRetrieveRRated.Click += new System.EventHandler(this.btnRetrieveRRated_Click);
             // 
+            // btnRetrieveAllSciFicbyWarner
+            // 
+            this.btnRetrieveAllSciFicbyWarner.Location = new System.Drawing.Point(52, 288);
+            this.btnRetrieveAllSciFicbyWarner.Name = "btnRetrieveAllSciFicbyWarner";
+            this.btnRetrieveAllSciFicbyWarner.Size = new System.Drawing.Size(397, 55);
+            this.btnRetrieveAllSciFicbyWarner.TabIndex = 5;
+            this.btnRetrieveAllSciFicbyWarner.Text = "Retrieve All SciFic by Warner";
+            this.btnRetrieveAllSciFicbyWarner.UseVisualStyleBackColor = true;
+            this.btnRetrieveAllSciFicbyWarner.Click += new System.EventHandler(this.btnRetrieveAllSciFicbyWarner_Click);
+            // 
+            // btnTotalActMov
+            // 
+            this.btnTotalActMov.Location = new System.Drawing.Point(52, 349);
+            this.btnTotalActMov.Name = "btnTotalActMov";
+            this.btnTotalActMov.Size = new System.Drawing.Size(397, 55);
+            this.btnTotalActMov.TabIndex = 6;
+            this.btnTotalActMov.Text = "Total Action Movies";
+            this.btnTotalActMov.UseVisualStyleBackColor = true;
+            this.btnTotalActMov.Click += new System.EventHandler(this.btnTotalActMov_Click);
+            // 
+            // lblShow
+            // 
+            this.lblShow.AutoSize = true;
+            this.lblShow.Location = new System.Drawing.Point(47, 629);
+            this.lblShow.Name = "lblShow";
+            this.lblShow.Size = new System.Drawing.Size(0, 25);
+            this.lblShow.TabIndex = 7;
+            // 
+            // btnTotalStockofActMov
+            // 
+            this.btnTotalStockofActMov.Location = new System.Drawing.Point(52, 420);
+            this.btnTotalStockofActMov.Name = "btnTotalStockofActMov";
+            this.btnTotalStockofActMov.Size = new System.Drawing.Size(397, 55);
+            this.btnTotalStockofActMov.TabIndex = 8;
+            this.btnTotalStockofActMov.Text = "Total Stock of Action Movies";
+            this.btnTotalStockofActMov.UseVisualStyleBackColor = true;
+            this.btnTotalStockofActMov.Click += new System.EventHandler(this.btnTotalStockofActMov_Click);
+            // 
             // EFPractice1Winform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(2107, 1285);
+            this.Controls.Add(this.btnTotalStockofActMov);
+            this.Controls.Add(this.lblShow);
+            this.Controls.Add(this.btnTotalActMov);
+            this.Controls.Add(this.btnRetrieveAllSciFicbyWarner);
             this.Controls.Add(this.btnRetrieveRRated);
             this.Controls.Add(this.btnByRPDesc);
             this.Controls.Add(this.btnByMovTitleAsc);
@@ -99,6 +145,7 @@
             this.Text = "Retrieve All From Movies";
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllMovies)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -109,5 +156,9 @@
         private System.Windows.Forms.Button btnByMovTitleAsc;
         private System.Windows.Forms.Button btnByRPDesc;
         private System.Windows.Forms.Button btnRetrieveRRated;
+        private System.Windows.Forms.Button btnRetrieveAllSciFicbyWarner;
+        private System.Windows.Forms.Button btnTotalActMov;
+        private System.Windows.Forms.Label lblShow;
+        private System.Windows.Forms.Button btnTotalStockofActMov;
     }
 }
