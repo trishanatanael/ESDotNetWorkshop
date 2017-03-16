@@ -131,6 +131,9 @@
     <Compile Include="Movies.cs">
       <DependentUpon>EFPractice1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Producer.cs">
+      <DependentUpon>EFPractice1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="DafestyEDMWinform.resx">

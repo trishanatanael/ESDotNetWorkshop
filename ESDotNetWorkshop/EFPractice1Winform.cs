@@ -160,5 +160,37 @@ namespace ESDotNetWorkshop
             //LAMBDA??
             //no pure lambda available??
         }
+
+        private void btnQuery_Click(object sender, EventArgs e)
+        {
+            //??object not instantiated
+            DafestyEntities1 context = new DafestyEntities1();
+            var q = from x in context.Movies1
+                    where x.VideoCode == 5
+                    select x;
+
+            Movies m = new Movies();
+            m = q.First();
+            lblShow.Text = m.MovieTitle + " " + m.Rating + " " + m.Producer.ProducerName;
+
+        }
+
+        private void btnRetrieveAllbyWaltDisney_Click(object sender, EventArgs e)
+        {
+            DafestyEntities1 context = new DafestyEntities1();
+            var ret = from q in context.Movies1
+                      where q.ProducerID == "Walt"
+                      select new {q.Producer.ProducerName, q.MovieTitle, q.MovieType};
+
+            dgvAllMovies.DataSource = ret.ToList();
+        }
+
+        private void btnRetrieveAll4Col_Click(object sender, EventArgs e)
+        {
+            DafestyEntities1 context = new DafestyEntities1();
+            var ret = from q in context.Movies1
+                      select new { q.MovieTitle, q.Rating, q.MovieType, q.Producer.ProducerName };
+            dgvAllMovies.DataSource = ret.ToList();
+        }
     }
 }

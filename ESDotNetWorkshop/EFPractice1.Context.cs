@@ -26,5 +26,6 @@ namespace ESDotNetWorkshop
         }
     
         public virtual DbSet<Movies> Movies1 { get; set; }
+        public virtual DbSet<Producer> Producers { get; set; }
     }
 }

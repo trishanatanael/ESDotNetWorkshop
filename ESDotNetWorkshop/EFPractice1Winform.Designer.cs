@@ -40,12 +40,15 @@
             this.btnAvgPriceComMov = new System.Windows.Forms.Button();
             this.btnRetrieveRRated3Col = new System.Windows.Forms.Button();
             this.btnTotalStockofMov = new System.Windows.Forms.Button();
+            this.btnQuery = new System.Windows.Forms.Button();
+            this.btnRetrieveAllbyWaltDisney = new System.Windows.Forms.Button();
+            this.btnRetrieveAll4Col = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllMovies)).BeginInit();
             this.SuspendLayout();
             // 
             // btnRetrieveAll
             // 
-            this.btnRetrieveAll.Location = new System.Drawing.Point(52, 44);
+            this.btnRetrieveAll.Location = new System.Drawing.Point(40, 111);
             this.btnRetrieveAll.Name = "btnRetrieveAll";
             this.btnRetrieveAll.Size = new System.Drawing.Size(397, 55);
             this.btnRetrieveAll.TabIndex = 0;
@@ -56,15 +59,15 @@
             // dgvAllMovies
             // 
             this.dgvAllMovies.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAllMovies.Location = new System.Drawing.Point(497, 44);
+            this.dgvAllMovies.Location = new System.Drawing.Point(481, 105);
             this.dgvAllMovies.Name = "dgvAllMovies";
             this.dgvAllMovies.RowTemplate.Height = 33;
-            this.dgvAllMovies.Size = new System.Drawing.Size(1573, 1196);
+            this.dgvAllMovies.Size = new System.Drawing.Size(1733, 1274);
             this.dgvAllMovies.TabIndex = 1;
             // 
             // btnByMovTitleAsc
             // 
-            this.btnByMovTitleAsc.Location = new System.Drawing.Point(52, 105);
+            this.btnByMovTitleAsc.Location = new System.Drawing.Point(40, 172);
             this.btnByMovTitleAsc.Name = "btnByMovTitleAsc";
             this.btnByMovTitleAsc.Size = new System.Drawing.Size(397, 55);
             this.btnByMovTitleAsc.TabIndex = 2;
@@ -74,7 +77,7 @@
             // 
             // btnByRPDesc
             // 
-            this.btnByRPDesc.Location = new System.Drawing.Point(52, 166);
+            this.btnByRPDesc.Location = new System.Drawing.Point(40, 233);
             this.btnByRPDesc.Name = "btnByRPDesc";
             this.btnByRPDesc.Size = new System.Drawing.Size(397, 55);
             this.btnByRPDesc.TabIndex = 3;
@@ -84,7 +87,7 @@
             // 
             // btnRetrieveRRated
             // 
-            this.btnRetrieveRRated.Location = new System.Drawing.Point(52, 227);
+            this.btnRetrieveRRated.Location = new System.Drawing.Point(40, 294);
             this.btnRetrieveRRated.Name = "btnRetrieveRRated";
             this.btnRetrieveRRated.Size = new System.Drawing.Size(397, 55);
             this.btnRetrieveRRated.TabIndex = 4;
@@ -94,7 +97,7 @@
             // 
             // btnRetrieveAllSciFicbyWarner
             // 
-            this.btnRetrieveAllSciFicbyWarner.Location = new System.Drawing.Point(52, 288);
+            this.btnRetrieveAllSciFicbyWarner.Location = new System.Drawing.Point(40, 355);
             this.btnRetrieveAllSciFicbyWarner.Name = "btnRetrieveAllSciFicbyWarner";
             this.btnRetrieveAllSciFicbyWarner.Size = new System.Drawing.Size(397, 55);
             this.btnRetrieveAllSciFicbyWarner.TabIndex = 5;
@@ -104,7 +107,7 @@
             // 
             // btnTotalActMov
             // 
-            this.btnTotalActMov.Location = new System.Drawing.Point(52, 349);
+            this.btnTotalActMov.Location = new System.Drawing.Point(40, 416);
             this.btnTotalActMov.Name = "btnTotalActMov";
             this.btnTotalActMov.Size = new System.Drawing.Size(397, 55);
             this.btnTotalActMov.TabIndex = 6;
@@ -115,14 +118,15 @@
             // lblShow
             // 
             this.lblShow.AutoSize = true;
-            this.lblShow.Location = new System.Drawing.Point(205, 943);
+            this.lblShow.Location = new System.Drawing.Point(476, 44);
             this.lblShow.Name = "lblShow";
-            this.lblShow.Size = new System.Drawing.Size(0, 25);
+            this.lblShow.Size = new System.Drawing.Size(194, 25);
             this.lblShow.TabIndex = 7;
+            this.lblShow.Text = "Will be shown here";
             // 
             // btnTotalStockofActMov
             // 
-            this.btnTotalStockofActMov.Location = new System.Drawing.Point(52, 410);
+            this.btnTotalStockofActMov.Location = new System.Drawing.Point(40, 477);
             this.btnTotalStockofActMov.Name = "btnTotalStockofActMov";
             this.btnTotalStockofActMov.Size = new System.Drawing.Size(397, 55);
             this.btnTotalStockofActMov.TabIndex = 8;
@@ -132,7 +136,7 @@
             // 
             // btnAvgPriceComMov
             // 
-            this.btnAvgPriceComMov.Location = new System.Drawing.Point(52, 471);
+            this.btnAvgPriceComMov.Location = new System.Drawing.Point(40, 538);
             this.btnAvgPriceComMov.Name = "btnAvgPriceComMov";
             this.btnAvgPriceComMov.Size = new System.Drawing.Size(397, 55);
             this.btnAvgPriceComMov.TabIndex = 9;
@@ -142,7 +146,7 @@
             // 
             // btnRetrieveRRated3Col
             // 
-            this.btnRetrieveRRated3Col.Location = new System.Drawing.Point(52, 532);
+            this.btnRetrieveRRated3Col.Location = new System.Drawing.Point(40, 599);
             this.btnRetrieveRRated3Col.Name = "btnRetrieveRRated3Col";
             this.btnRetrieveRRated3Col.Size = new System.Drawing.Size(397, 55);
             this.btnRetrieveRRated3Col.TabIndex = 10;
@@ -152,7 +156,7 @@
             // 
             // btnTotalStockofMov
             // 
-            this.btnTotalStockofMov.Location = new System.Drawing.Point(52, 593);
+            this.btnTotalStockofMov.Location = new System.Drawing.Point(40, 660);
             this.btnTotalStockofMov.Name = "btnTotalStockofMov";
             this.btnTotalStockofMov.Size = new System.Drawing.Size(397, 55);
             this.btnTotalStockofMov.TabIndex = 11;
@@ -160,11 +164,44 @@
             this.btnTotalStockofMov.UseVisualStyleBackColor = true;
             this.btnTotalStockofMov.Click += new System.EventHandler(this.btnTotalStockofMov_Click);
             // 
+            // btnQuery
+            // 
+            this.btnQuery.Location = new System.Drawing.Point(40, 857);
+            this.btnQuery.Name = "btnQuery";
+            this.btnQuery.Size = new System.Drawing.Size(397, 51);
+            this.btnQuery.TabIndex = 12;
+            this.btnQuery.Text = "Query";
+            this.btnQuery.UseVisualStyleBackColor = true;
+            this.btnQuery.Click += new System.EventHandler(this.btnQuery_Click);
+            // 
+            // btnRetrieveAllbyWaltDisney
+            // 
+            this.btnRetrieveAllbyWaltDisney.Location = new System.Drawing.Point(40, 914);
+            this.btnRetrieveAllbyWaltDisney.Name = "btnRetrieveAllbyWaltDisney";
+            this.btnRetrieveAllbyWaltDisney.Size = new System.Drawing.Size(397, 55);
+            this.btnRetrieveAllbyWaltDisney.TabIndex = 13;
+            this.btnRetrieveAllbyWaltDisney.Text = "Retrieve All by Walt Disney";
+            this.btnRetrieveAllbyWaltDisney.UseVisualStyleBackColor = true;
+            this.btnRetrieveAllbyWaltDisney.Click += new System.EventHandler(this.btnRetrieveAllbyWaltDisney_Click);
+            // 
+            // btnRetrieveAll4Col
+            // 
+            this.btnRetrieveAll4Col.Location = new System.Drawing.Point(40, 975);
+            this.btnRetrieveAll4Col.Name = "btnRetrieveAll4Col";
+            this.btnRetrieveAll4Col.Size = new System.Drawing.Size(397, 55);
+            this.btnRetrieveAll4Col.TabIndex = 14;
+            this.btnRetrieveAll4Col.Text = "Retrieve All in 4 Columns";
+            this.btnRetrieveAll4Col.UseVisualStyleBackColor = true;
+            this.btnRetrieveAll4Col.Click += new System.EventHandler(this.btnRetrieveAll4Col_Click);
+            // 
             // EFPractice1Winform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2107, 1285);
+            this.ClientSize = new System.Drawing.Size(2259, 1419);
+            this.Controls.Add(this.btnRetrieveAll4Col);
+            this.Controls.Add(this.btnRetrieveAllbyWaltDisney);
+            this.Controls.Add(this.btnQuery);
             this.Controls.Add(this.btnTotalStockofMov);
             this.Controls.Add(this.btnRetrieveRRated3Col);
             this.Controls.Add(this.btnAvgPriceComMov);
@@ -178,7 +215,7 @@
             this.Controls.Add(this.dgvAllMovies);
             this.Controls.Add(this.btnRetrieveAll);
             this.Name = "EFPractice1Winform";
-            this.Text = "Retrieve All From Movies";
+            this.Text = "Retrieve All in Grid (4 Columns)";
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllMovies)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -199,5 +236,8 @@
         private System.Windows.Forms.Button btnAvgPriceComMov;
         private System.Windows.Forms.Button btnRetrieveRRated3Col;
         private System.Windows.Forms.Button btnTotalStockofMov;
+        private System.Windows.Forms.Button btnQuery;
+        private System.Windows.Forms.Button btnRetrieveAllbyWaltDisney;
+        private System.Windows.Forms.Button btnRetrieveAll4Col;
     }
 }
