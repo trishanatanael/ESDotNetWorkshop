@@ -83,6 +83,27 @@
     <Compile Include="DafestyEDMWinform.Designer.cs">
       <DependentUpon>DafestyEDMWinform.cs</DependentUpon>
     </Compile>
+    <Compile Include="EFOPDafestyED.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EFOPDafestyED.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EFOPDafestyED.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EFOPDafestyED.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EFOPDafestyED.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EFOPDafestyED.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="EFOPDafestyEDMWinform.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EFOPDafestyEDMWinform.Designer.cs">
+      <DependentUpon>EFOPDafestyEDMWinform.cs</DependentUpon>
+    </Compile>
     <Compile Include="EFPractice1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -128,16 +149,22 @@
     <Compile Include="Ex1_3Difficult.Designer.cs">
       <DependentUpon>Ex1_3Difficult.cs</DependentUpon>
     </Compile>
+    <Compile Include="Movie.cs">
+      <DependentUpon>EFOPDafestyED.tt</DependentUpon>
+    </Compile>
     <Compile Include="Movies.cs">
       <DependentUpon>EFPractice1.tt</DependentUpon>
     </Compile>
     <Compile Include="Producer.cs">
-      <DependentUpon>EFPractice1.tt</DependentUpon>
+      <DependentUpon>EFOPDafestyED.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="DafestyEDMWinform.resx">
       <DependentUpon>DafestyEDMWinform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EFOPDafestyEDMWinform.resx">
+      <DependentUpon>EFOPDafestyEDMWinform.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EFPractice1Winform.resx">
       <DependentUpon>EFPractice1Winform.cs</DependentUpon>
@@ -174,6 +201,13 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>EFPractice1.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <EntityDeploy Include="EFOPDafestyED.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>EFOPDafestyED.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="EFOPDafestyED.edmx.diagram">
+      <DependentUpon>EFOPDafestyED.edmx</DependentUpon>
+    </None>
     <None Include="EFPractice1.edmx.diagram">
       <DependentUpon>EFPractice1.edmx</DependentUpon>
     </None>
@@ -201,6 +235,16 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>DafestyEDM.edmx</DependentUpon>
       <LastGenOutput>DafestyEDM.cs</LastGenOutput>
+    </Content>
+    <Content Include="EFOPDafestyED.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EFOPDafestyED.edmx</DependentUpon>
+      <LastGenOutput>EFOPDafestyED.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="EFOPDafestyED.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>EFOPDafestyED.edmx</DependentUpon>
+      <LastGenOutput>EFOPDafestyED.cs</LastGenOutput>
     </Content>
     <Content Include="EFPractice1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

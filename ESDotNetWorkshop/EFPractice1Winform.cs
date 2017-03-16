@@ -164,14 +164,13 @@ namespace ESDotNetWorkshop
         private void btnQuery_Click(object sender, EventArgs e)
         {
             //??object not instantiated
-            DafestyEntities1 context = new DafestyEntities1();
-            var q = from x in context.Movies1
-                    where x.VideoCode == 5
-                    select x;
+            //DafestyEntities1 context = new DafestyEntities1();
+            //var q = from x in context.Movies1
+            //        where x.VideoCode == 5
+            //        select x;
 
-            Movies m = new Movies();
-            m = q.First();
-            lblShow.Text = m.MovieTitle + " " + m.Rating + " " + m.Producer.ProducerName;
+            //Movie m = q.First();
+            //lblShow.Text = m.MovieTitle + " " + m.Rating + " " + m.Producer.ProducerName;
 
         }
 

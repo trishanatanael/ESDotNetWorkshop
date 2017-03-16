@@ -12,19 +12,19 @@ namespace ESDotNetWorkshop
     using System;
     using System.Collections.Generic;
     
-    public partial class Producer
+    public partial class Movie
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Producer()
-        {
-            this.Movies = new HashSet<Movie>();
-        }
-    
+        public short VideoCode { get; set; }
+        public string MovieTitle { get; set; }
+        public string Genre { get; set; }
+        public string Rating { get; set; }
+        public Nullable<float> RentalCost { get; set; }
         public string ProducerID { get; set; }
-        public string ProducerName { get; set; }
-        public string CountryCode { get; set; }
+        public string Director { get; set; }
+        public string Media { get; set; }
+        public Nullable<short> TotalStock { get; set; }
+        public Nullable<short> NumberRented { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Movie> Movies { get; set; }
+        public virtual Producer Producer { get; set; }
     }
 }
