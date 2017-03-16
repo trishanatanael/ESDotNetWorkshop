@@ -18,9 +18,10 @@ namespace ESDotNetWorkshop
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Ex1_1());
             //Application.Run(new Ex1_2());
-            Application.Run(new Ex1_3());
+            //Application.Run(new Ex1_3());
             //Application.Run(new Ex1_3Difficult());
             //Application.Run(new DafestyEDMWinform());
+            Application.Run(new EFPractice1Winform());
         }
     }
 }
