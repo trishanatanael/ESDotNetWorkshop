@@ -52,6 +52,33 @@ namespace ESDotNetWorkshop
             //object i = 5;
             //var j = 6;
             //label2.Text = ((string)x).Substring(1, 1);
+
+            //multiple entity
+            //DafestyEntities context = new DafestyEntities();
+            //Customer c = context.Customers.Where(x => x.CustomerID == "1001");
+            //label2.Text = c.CustomerName;
+            //label2.Text = c.Country.CountryName;//from 1 object to another
+            //Customer cGER = context.Customers.Where(x => x.CountryName == "Germany");
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            DafestyEntities context = new DafestyEntities();
+            //Customer c = context.Customers.Where(x => x.CustomerID == "1000").First();
+            //label1.Text = c.CustomerName;
+            //label2.Text = c.MemberStatus;
+            //add customer
+            Customer c = new Customer();
+            //c.CustomerID = "1007";
+            //c.CustomerName = "Venkat";
+            //c.MemberStatus = "Z";
+            //context.Customers.Add(c);
+            //deletion
+            
+            context.Customers.Remove(c);
+            context.SaveChanges();
+
         }
     }
 }

@@ -104,17 +104,61 @@ namespace ESDotNetWorkshop
 
         private void btnTotalStockofActMov_Click(object sender, EventArgs e)
         {
-            //LINQ
+            //LINQ?? how to get action only ??
+            //DafestyEntities1 context = new DafestyEntities1();
+            //var ret = from x in context.Movies1
+            //          group x by x.MovieType into g
+            //          //group x by (x.MovieType == "Action") into g
+            //          //select new { g.Key.Where() copies = g.Sum(y => y.TotalStock) };
+            //lblShow.Text = ret.ToString();
+
+
+            //LAMBDA
+            DafestyEntities1 context = new DafestyEntities1();
+            int? totalStockActionMov = context.Movies1.Where(y => y.MovieType == "Action").Sum(x => x.TotalStock);
+            lblShow.Text = totalStockActionMov.ToString();
+        }
+
+        private void btnAvgPriceComMov_Click(object sender, EventArgs e)
+        {
+            //LINQ??
             DafestyEntities1 context = new DafestyEntities1();
             var ret = from q in context.Movies1
-                      where q.MovieType == "Action"
-                      select new Sum(q.TotalStock);
-            lblShow.Text = ret.Count().ToString();
+                      where q.MovieType == "Comedy"
+                      select q.RentalPrice;
+            lblShow.Text = ret.Average().ToString();
 
             //LAMBDA
             //DafestyEntities1 context = new DafestyEntities1();
-            //int? totalStockActionMov = context.Movies1.Where(y => y.MovieType == "Action").Sum(x => x.TotalStock);
-            //lblShow.Text = totalStockActionMov.ToString();
+            //double? avgPriceComMov = context.Movies1.Where(y => y.MovieType == "Comedy").Average(x => x.RentalPrice);
+            //lblShow.Text = avgPriceComMov.ToString();
+        }
+
+        private void btnRetrieveRRated3Col_Click(object sender, EventArgs e)
+        {
+            //LINQ
+            DafestyEntities1 context = new DafestyEntities1();
+            var ret = from q in context.Movies1
+                      where q.Rating == "R"
+                      select new { q.VideoCode, q.MovieTitle, q.RentalPrice};
+            dgvAllMovies.DataSource = ret.ToList();
+
+            //LAMBDA
+            //DafestyEntities1 context = new DafestyEntities1();
+            //dgvAllMovies.DataSource = context.Movies1.Where(x => x.Rating == "R").Select(q => new {q.VideoCode, q.MovieTitle, q.RentalPrice}).ToList();
+        }
+
+        private void btnTotalStockofMov_Click(object sender, EventArgs e)
+        {
+            //LINQ??
+            DafestyEntities1 context = new DafestyEntities1();
+            var ret = from x in context.Movies1
+                      group x by x.MovieType into g
+                      select new { MovieType = g.Key, copies = g.Sum(y => y.TotalStock) };
+            dgvAllMovies.DataSource = ret.ToList();
+
+            //LAMBDA??
+            //no pure lambda available??
         }
     }
 }

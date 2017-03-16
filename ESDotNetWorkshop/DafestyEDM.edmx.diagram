@@ -6,6 +6,8 @@
     <edmx:Diagrams>
       <Diagram DiagramId="34482b72f25f4550bebc113b6812ae24" Name="Diagram1">
         <EntityTypeShape EntityType="DafestyModel.Customer" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DafestyModel.Country" Width="1.5" PointX="3.625" PointY="1.875" />
+        <AssociationConnector Association="DafestyModel.FK_Customers_Country" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

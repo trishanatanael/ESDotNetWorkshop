@@ -30,5 +30,7 @@ namespace ESDotNetWorkshop
         public string FaxNumber { get; set; }
         public string EmailAddress { get; set; }
         public string Notes { get; set; }
+    
+        public virtual Country Country { get; set; }
     }
 }

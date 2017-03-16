@@ -37,6 +37,9 @@
             this.btnTotalActMov = new System.Windows.Forms.Button();
             this.lblShow = new System.Windows.Forms.Label();
             this.btnTotalStockofActMov = new System.Windows.Forms.Button();
+            this.btnAvgPriceComMov = new System.Windows.Forms.Button();
+            this.btnRetrieveRRated3Col = new System.Windows.Forms.Button();
+            this.btnTotalStockofMov = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAllMovies)).BeginInit();
             this.SuspendLayout();
             // 
@@ -112,14 +115,14 @@
             // lblShow
             // 
             this.lblShow.AutoSize = true;
-            this.lblShow.Location = new System.Drawing.Point(47, 629);
+            this.lblShow.Location = new System.Drawing.Point(205, 943);
             this.lblShow.Name = "lblShow";
             this.lblShow.Size = new System.Drawing.Size(0, 25);
             this.lblShow.TabIndex = 7;
             // 
             // btnTotalStockofActMov
             // 
-            this.btnTotalStockofActMov.Location = new System.Drawing.Point(52, 420);
+            this.btnTotalStockofActMov.Location = new System.Drawing.Point(52, 410);
             this.btnTotalStockofActMov.Name = "btnTotalStockofActMov";
             this.btnTotalStockofActMov.Size = new System.Drawing.Size(397, 55);
             this.btnTotalStockofActMov.TabIndex = 8;
@@ -127,11 +130,44 @@
             this.btnTotalStockofActMov.UseVisualStyleBackColor = true;
             this.btnTotalStockofActMov.Click += new System.EventHandler(this.btnTotalStockofActMov_Click);
             // 
+            // btnAvgPriceComMov
+            // 
+            this.btnAvgPriceComMov.Location = new System.Drawing.Point(52, 471);
+            this.btnAvgPriceComMov.Name = "btnAvgPriceComMov";
+            this.btnAvgPriceComMov.Size = new System.Drawing.Size(397, 55);
+            this.btnAvgPriceComMov.TabIndex = 9;
+            this.btnAvgPriceComMov.Text = "Avg. Price for Comedy Movie";
+            this.btnAvgPriceComMov.UseVisualStyleBackColor = true;
+            this.btnAvgPriceComMov.Click += new System.EventHandler(this.btnAvgPriceComMov_Click);
+            // 
+            // btnRetrieveRRated3Col
+            // 
+            this.btnRetrieveRRated3Col.Location = new System.Drawing.Point(52, 532);
+            this.btnRetrieveRRated3Col.Name = "btnRetrieveRRated3Col";
+            this.btnRetrieveRRated3Col.Size = new System.Drawing.Size(397, 55);
+            this.btnRetrieveRRated3Col.TabIndex = 10;
+            this.btnRetrieveRRated3Col.Text = "Retrieve All \'R\' Rated (3 Columns Only)";
+            this.btnRetrieveRRated3Col.UseVisualStyleBackColor = true;
+            this.btnRetrieveRRated3Col.Click += new System.EventHandler(this.btnRetrieveRRated3Col_Click);
+            // 
+            // btnTotalStockofMov
+            // 
+            this.btnTotalStockofMov.Location = new System.Drawing.Point(52, 593);
+            this.btnTotalStockofMov.Name = "btnTotalStockofMov";
+            this.btnTotalStockofMov.Size = new System.Drawing.Size(397, 55);
+            this.btnTotalStockofMov.TabIndex = 11;
+            this.btnTotalStockofMov.Text = "Total Stock of Movies";
+            this.btnTotalStockofMov.UseVisualStyleBackColor = true;
+            this.btnTotalStockofMov.Click += new System.EventHandler(this.btnTotalStockofMov_Click);
+            // 
             // EFPractice1Winform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(2107, 1285);
+            this.Controls.Add(this.btnTotalStockofMov);
+            this.Controls.Add(this.btnRetrieveRRated3Col);
+            this.Controls.Add(this.btnAvgPriceComMov);
             this.Controls.Add(this.btnTotalStockofActMov);
             this.Controls.Add(this.lblShow);
             this.Controls.Add(this.btnTotalActMov);
@@ -160,5 +196,8 @@
         private System.Windows.Forms.Button btnTotalActMov;
         private System.Windows.Forms.Label lblShow;
         private System.Windows.Forms.Button btnTotalStockofActMov;
+        private System.Windows.Forms.Button btnAvgPriceComMov;
+        private System.Windows.Forms.Button btnRetrieveRRated3Col;
+        private System.Windows.Forms.Button btnTotalStockofMov;
     }
 }

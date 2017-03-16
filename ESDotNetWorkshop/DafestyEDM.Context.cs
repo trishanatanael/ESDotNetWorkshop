@@ -26,5 +26,6 @@ namespace ESDotNetWorkshop
         }
     
         public virtual DbSet<Customer> Customers { get; set; }
+        public virtual DbSet<Country> Countries { get; set; }
     }
 }
