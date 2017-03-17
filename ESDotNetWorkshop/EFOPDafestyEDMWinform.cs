@@ -31,16 +31,33 @@ namespace ESDotNetWorkshop
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             //how to do the rental cost??
-            //DafestyEntities2 context = new DafestyEntities2();
-            //Movie m = context.Movies1.Where(x => x.VideoCode == 5).First();
-            //m.RentalCost = "1.8";
-            //context.SaveChanges();
+            DafestyEntities2 context = new DafestyEntities2();
+            Movie m = context.Movies1.Where(x => x.VideoCode == 5).First();
+            m.RentalCost = 18 / 10;
+            context.SaveChanges();
         }
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
             DafestyEntities2 context = new DafestyEntities2();
-            Movie m = context.Movies1.Where(x => x.VideoCode == 5).First();
+            Movie movIn = new Movie();
+            movIn.VideoCode = 400;
+            movIn.MovieTitle = "Sully";
+            movIn.Genre = "Drama";
+            movIn.Producer.ProducerName = "Warner Brothers";
+            movIn.RentalCost = 25 / 10;
+            movIn.Rating = "U";
+            movIn.TotalStock = 4;
+            context.Movies1.Add(movIn);
+            context.SaveChanges();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            DafestyEntities2 context = new DafestyEntities2();
+            Movie movDel = context.Movies1.Where(x => x.VideoCode == 400).First();
+            context.Movies1.Remove(movDel);
+            context.SaveChanges();
         }
     }
 }
