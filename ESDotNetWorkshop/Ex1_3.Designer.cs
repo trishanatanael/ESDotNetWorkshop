@@ -132,7 +132,7 @@
             this.Controls.Add(this.gbxMovieDetails);
             this.Name = "Ex1_3";
             this.Text = "Movie Data Screen";
-            this.Load += new System.EventHandler(this.Ex1_3_Load);
+
             this.gbxMovieDetails.ResumeLayout(false);
             this.gbxMovieDetails.PerformLayout();
             this.ResumeLayout(false);

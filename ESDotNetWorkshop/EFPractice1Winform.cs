@@ -19,6 +19,7 @@ namespace ESDotNetWorkshop
 
         private void btnRetrieveAll_Click(object sender, EventArgs e)
         {
+            //1
             //LINQ
             //DafestyEntities1 context = new DafestyEntities1();
             //var ret = from q in context.Movies1
@@ -33,6 +34,7 @@ namespace ESDotNetWorkshop
 
         private void btnByMovTitleAsc_Click(object sender, EventArgs e)
         {
+            //2
             //LINQ
             DafestyEntities1 context = new DafestyEntities1();
             var ret = from q in context.Movies1
@@ -154,11 +156,11 @@ namespace ESDotNetWorkshop
             DafestyEntities1 context = new DafestyEntities1();
             var ret = from x in context.Movies1
                       group x by x.MovieType into g
-                      select new { MovieType = g.Key, copies = g.Sum(y => y.TotalStock) };
+                      select new { MovieType = g.Key, NooFCopies = g.Sum(y => y.TotalStock) };
             dgvAllMovies.DataSource = ret.ToList();
 
             //LAMBDA??
-            //no pure lambda available??
+            //no pure lambda available 
         }
 
         private void btnQuery_Click(object sender, EventArgs e)
@@ -167,10 +169,11 @@ namespace ESDotNetWorkshop
             //DafestyEntities1 context = new DafestyEntities1();
             //var q = from x in context.Movies1
             //        where x.VideoCode == 5
-            //        select x;
+            //        select new { x.MovieTitle, x.Rating, x.Producer.ProducerName };
+            //Movies1 m = q.First();
+            //lblShow.Text += q.ToString();
+            ////dgvAllMovies.DataSource = q.ToList();
 
-            //Movie m = q.First();
-            //lblShow.Text = m.MovieTitle + " " + m.Rating + " " + m.Producer.ProducerName;
 
         }
 

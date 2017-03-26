@@ -31,9 +31,13 @@ namespace ESDotNetWorkshop
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             //how to do the rental cost??
+            short srchVidCode = Convert.ToInt16(tbxVideoCode.ToString());
             DafestyEntities2 context = new DafestyEntities2();
-            Movie m = context.Movies1.Where(x => x.VideoCode == 5).First();
-            m.RentalCost = 18 / 10;
+            Movie m = context.Movies1.Where(x => x.VideoCode == @srchVidCode).First();
+            tbxVideoCode.Text = m.VideoCode.ToString();
+            tbxMovTitle.Text = m.MovieTitle.ToString();
+            tbxGenre.Text = m.Genre.ToString();
+            m.RentalCost = Convert.ToInt32(tbxRentalCost.ToString()) ;
             context.SaveChanges();
         }
 
@@ -41,11 +45,11 @@ namespace ESDotNetWorkshop
         {
             DafestyEntities2 context = new DafestyEntities2();
             Movie movIn = new Movie();
-            movIn.VideoCode = 400;
-            movIn.MovieTitle = "Sully";
-            movIn.Genre = "Drama";
+            movIn.VideoCode = Convert.ToInt16(tbxVideoCode.ToString());//id should be 400
+            movIn.MovieTitle = tbxMovTitle.ToString();
+            movIn.Genre = tbxGenre.ToString();
             movIn.Producer.ProducerName = "Warner Brothers";
-            movIn.RentalCost = 25 / 10;
+            movIn.RentalCost = Convert.ToInt32(tbxRentalCost.ToString());
             movIn.Rating = "U";
             movIn.TotalStock = 4;
             context.Movies1.Add(movIn);
